@@ -1,0 +1,76 @@
+#jwt-login-plugin {
+    font-size: 12px;
+}
+
+#jwt-login-plugin h1 {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#jwt-login-plugin h3 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#jwt-login-plugin h4 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#jwt-login-plugin code.generated-code {
+    display: block;
+    font-size: 11px;
+    color: #e83e8c;
+    word-break: break-word;
+    min-height: 30px;
+    position: relative;
+}
+
+#jwt-login-plugin code.generated-code .method {
+    background: #383d41;
+    color: #FFF;
+    margin-right: 5px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+#jwt-login-plugin .copy-button {
+    display: none;
+}
+
+#jwt-login-plugin .copy-button .btn {
+    padding: 2px;
+    font-size: 10px;
+    position: absolute;
+    top: 20%;
+    right: 5px;
+    cursor: pointer;
+}
+
+#jwt-login-plugin input[type="text"].form-control,
+#jwt-login-plugin input[type="password"].form-control,
+#jwt-login-plugin select.form-control {
+    height: 30px;
+    font-size: 13px;
+}
+
+#jwt-login-plugin .url-example-title {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+#jwt-login-plugin #tabs-container {
+    border: 1px solid #dee2e6;
+    border-top: 0;
+    padding: 10px;
+}
+
+#jwt-login-plugin div#nav-tab a.nav-item:focus,
+#jwt-login-plugin div#nav-tab a.nav-item:active,
+#jwt-login-plugin div#nav-tab a.nav-item {
+    outline: none !important;
+    outline-color: transparent;
+    box-shadow: none;
+}

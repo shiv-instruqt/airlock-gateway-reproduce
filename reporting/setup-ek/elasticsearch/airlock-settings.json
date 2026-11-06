@@ -1,0 +1,29 @@
+{
+  "template": {
+	"mappings": {
+	  "dynamic_templates": [
+		{
+		  "other_fields": {
+			"mapping": {
+			  "norms": false,
+			  "type": "keyword"
+			},
+			"match": "*",
+			"match_mapping_type": "string"
+		  }
+		}
+	  ]
+	},
+	"settings": {
+	  "index": {
+		"refresh_interval": "10s",
+		"sort.field": [
+		  "@timestamp"
+		],
+		"sort.order": [
+		  "desc"
+		]
+	  }
+	}
+  }
+}

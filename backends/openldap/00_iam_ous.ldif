@@ -1,0 +1,115 @@
+version: 1
+
+dn: dc=ergon,dc=ch
+objectClass: dcObject
+objectClass: organization
+objectClass: top
+dc: ergon
+o: Ergon Informatik AG
+
+dn: cn=admin,dc=ergon,dc=ch
+objectClass: organizationalRole
+objectClass: simpleSecurityObject
+cn: admin
+userPassword:: e1NTSEF9SWxBZDhBd25iNUVzNCtqZXdTckpFQXhRN1Zsb1NNRlo=
+description: LDAP administrator
+
+dn: ou=users,dc=ergon,dc=ch
+objectClass: organizationalUnit
+objectClass: top
+ou: users
+
+dn: ou=groups,dc=ergon,dc=ch
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+dn: cn=airlock-administrator,ou=groups,dc=ergon,dc=ch
+objectClass: groupOfNames
+objectClass: top
+cn: airlock-administrator
+member: cn=adm_hansm,ou=users,dc=ergon,dc=ch
+
+dn: ou=policies,dc=ergon,dc=ch
+objectClass: organizationalUnit
+ou: policies
+
+dn: cn=passwordDefault,ou=policies,dc=ergon,dc=ch
+objectClass: person
+objectClass: pwdPolicy
+objectClass: pwdPolicyChecker
+objectClass: top
+cn: passwordDefault
+pwdAttribute: userPassword
+sn: passwordDefault
+pwdAllowUserChange: TRUE
+pwdCheckQuality: 0
+pwdExpireWarning: 0
+pwdFailureCountInterval: 0
+pwdGraceAuthNLimit: 0
+pwdInHistory: 0
+pwdLockout: FALSE
+pwdLockoutDuration: 0
+pwdMaxAge: 0
+pwdMaxFailure: 0
+pwdMinAge: 0
+pwdMinLength: 0
+pwdMustChange: FALSE
+pwdSafeModify: FALSE
+
+dn: cn=peterm,ou=users,dc=ergon,dc=ch
+objectClass: IamUser
+objectClass: inetOrgPerson
+cn: peterm
+sn: Mueller
+failedTokenCounts: {}
+givenName: Peter
+mail: peterm@airlock.academy
+mobile: +41783332211
+userPassword:: ZXhwZXJ0MTA=
+
+dn: cn=alexandras,ou=users,dc=ergon,dc=ch
+objectClass: IamUser
+objectClass: inetOrgPerson
+cn: alexandras
+sn: Smith
+failedTokenCounts: {}
+givenName: Alexandra
+mail: alexandras@airlock.academy
+mobile: +41783332212
+userPassword:: ZXhwZXJ0MTA=
+
+dn: cn=adm_hansm,ou=users,dc=ergon,dc=ch
+objectClass: IamUser
+objectClass: inetOrgPerson
+cn: adm_hansm
+sn: Mitty
+failedTokenCounts: {}
+givenName: Hans
+mail: adm_hansm@airlock.academy
+mobile: +41783332213
+userPassword:: ZXhwZXJ0MTA=
+memberOf: cn=airlock-administrator,ou=groups,dc=ergon,dc=ch
+
+dn: cn=hansm,ou=users,dc=ergon,dc=ch
+objectClass: IamUser
+objectClass: inetOrgPerson
+cn: hansm
+sn: Mitty
+failedTokenCounts: {}
+givenName: Hans
+mail: hansm@airlock.academy
+mobile: +41783332213
+userPassword:: ZXhwZXJ0MTA=
+
+dn: cn=monikas,ou=users,dc=ergon,dc=ch
+objectClass: IamUser
+objectClass: inetOrgPerson
+cn: monikas
+sn: Streit
+failedTokenCounts: {}
+givenName: Monika
+mail: monikas@airlock.academy
+mobile: +41783332214
+userPassword:: ZXhwZXJ0MTA=
+

@@ -1,0 +1,12 @@
+{
+	"index_patterns": [
+		"airlock-gateway-default-*"
+	],
+	"composed_of": [
+		"airlock-settings",
+		"airlock-gateway-fields",
+		"airlock-gateway-mlsvc-fields",
+		"airlock-gateway-settings"
+	],
+	"version": 8000
+}

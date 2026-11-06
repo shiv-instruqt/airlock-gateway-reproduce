@@ -1,0 +1,11 @@
+{
+	"index_patterns": [
+		"airlock-iam-*"
+	],
+	"composed_of": [
+		"airlock-settings",
+		"airlock-iam-fields",
+		"airlock-iam-settings"
+	],
+	"version": 8000
+}

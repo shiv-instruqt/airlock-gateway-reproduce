@@ -1,0 +1,292 @@
+{
+	"template": {
+		"mappings": {
+			"properties": {
+				"@timestamp": {
+					"type": "date"
+				},
+				"action": {
+					"type": "keyword"
+				},
+				"attack_type": {
+					"type": "keyword"
+				},
+				"audit_token": {
+					"type": "keyword"
+				},
+				"back_dst_ip": {
+					"type": "ip"
+				},
+				"back_dst_port": {
+					"type": "integer"
+				},
+				"back_host": {
+					"type": "keyword"
+				},
+				"back_host_ip": {
+					"type": "keyword"
+				},
+				"back_host_port": {
+					"type": "keyword"
+				},
+				"back_host_proto": {
+					"type": "keyword"
+				},
+				"back_src_ip": {
+					"type": "ip"
+				},
+				"back_src_port": {
+					"type": "integer"
+				},
+				"backend_url": {
+					"type": "keyword"
+				},
+				"block_type": {
+					"type": "keyword"
+				},
+				"client_ip": {
+					"type": "ip"
+				},
+				"constraint": {
+					"type": "keyword"
+				},
+				"corr_id": {
+					"type": "keyword"
+				},
+				"corr_id_2": {
+					"type": "keyword"
+				},
+				"corr_id_3": {
+					"type": "keyword"
+				},
+				"entry_path": {
+					"type": "keyword"
+				},
+				"entry_query": {
+					"type": "keyword"
+				},
+				"entry_url": {
+					"type": "keyword"
+				},
+				"error_code": {
+					"type": "keyword"
+				},
+				"facility": {
+					"type": "keyword"
+				},
+				"file": {
+					"type": "keyword"
+				},
+				"front_dst_ip": {
+					"type": "ip"
+				},
+				"front_dst_port": {
+					"type": "integer"
+				},
+				"front_src_ip": {
+					"type": "ip"
+				},
+				"front_src_port": {
+					"type": "integer"
+				},
+				"front_tls_cipher": {
+					"type": "keyword"
+				},
+				"front_tls_group": {
+					"type": "keyword"
+				},
+				"front_tls_client_subject_dn": {
+					"type": "keyword"
+				},
+				"front_tls_proto": {
+					"type": "keyword"
+				},
+				"front_tls_sess_id": {
+					"type": "keyword"
+				},
+				"geoip_continent": {
+					"type": "keyword"
+				},
+				"geoip_country": {
+					"type": "keyword"
+				},
+				"geoip_location": {
+					"type": "geo_point"
+				},
+				"host": {
+					"type": "keyword"
+				},
+				"http_accept_lang": {
+					"type": "keyword"
+				},
+				"http_method": {
+					"type": "keyword"
+				},
+				"http_redirect_url": {
+					"type": "keyword"
+				},
+				"http_referrer": {
+					"type": "keyword"
+				},
+				"http_status": {
+					"type": "short"
+				},
+				"http_user_agent": {
+					"type": "keyword"
+				},
+				"ip_lists": {
+					"type": "keyword"
+				},
+				"lifetime": {
+					"type": "keyword"
+				},
+				"log_cat": {
+					"type": "keyword"
+				},
+				"log_id": {
+					"type": "keyword"
+				},
+				"mapping": {
+					"type": "keyword"
+				},
+				"message": {
+					"type": "text",
+					"norms": false
+				},
+				"ml_anomaly": {
+					"type": "keyword"
+				},
+				"ml_anomaly_ip": {
+					"type": "keyword"
+				},
+				"ml_app": {
+					"type": "keyword"
+				},
+				"pid": {
+					"type": "integer"
+				},
+				"position": {
+					"type": "keyword"
+				},
+				"priority": {
+					"type": "keyword"
+				},
+				"program": {
+					"type": "keyword"
+				},
+				"rcpt_id": {
+					"type": "long"
+				},
+				"reason": {
+					"type": "keyword"
+				},
+				"reject_type": {
+					"type": "keyword"
+				},
+				"req_id": {
+					"type": "keyword"
+				},
+				"req_rate": {
+					"type": "long"
+				},
+				"req_rate_licensed": {
+					"type": "long"
+				},
+				"req_size": {
+					"type": "long"
+				},
+				"resp_size": {
+					"type": "long"
+				},
+				"rule_group": {
+					"type": "keyword"
+				},
+				"rule_group_key": {
+					"type": "keyword"
+				},
+				"rule_key": {
+					"type": "keyword"
+				},
+				"rule_name": {
+					"type": "keyword"
+				},
+				"sess_auth": {
+					"type": "boolean"
+				},
+				"sess_count_auth": {
+					"type": "long"
+				},
+				"sess_count_auth_licensed": {
+					"type": "long"
+				},
+				"sess_count_total": {
+					"type": "long"
+				},
+				"sess_id": {
+					"type": "keyword"
+				},
+				"tech_client_display_name": {
+					"type": "keyword"
+				},
+				"tech_client_id": {
+					"type": "keyword"
+				},
+				"tech_client_label": {
+					"type": "keyword"
+				},
+				"tech_client_subscription_id": {
+					"type": "keyword"
+				},
+				"tenant": {
+					"type": "keyword"
+				},
+				"th_mode": {
+					"type": "keyword"
+				},
+				"time_backend": {
+					"type": "long"
+				},
+				"time_filter": {
+					"type": "long"
+				},
+				"time_req_icap": {
+					"type": "long"
+				},
+				"time_resp": {
+					"type": "long"
+				},
+				"time_resp_icap": {
+					"type": "long"
+				},
+				"time_total": {
+					"type": "long"
+				},
+				"time_wsock_total": {
+					"type": "long"
+				},
+				"vhost": {
+					"type": "keyword"
+				},
+				"vhost_ip": {
+					"type": "ip"
+				},
+				"vhost_port": {
+					"type": "integer"
+				},
+				"vhost_proto": {
+					"type": "keyword"
+				},
+				"vhost_proto_vers": {
+					"type": "keyword"
+				},
+				"wsock_bytes_in": {
+					"type": "long"
+				},
+				"wsock_bytes_out": {
+					"type": "long"
+				}
+			}
+		}
+	},
+	"version": 8000
+}

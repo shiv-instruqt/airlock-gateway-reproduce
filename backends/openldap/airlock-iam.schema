@@ -1,0 +1,591 @@
+#
+# BEGIN Iam attributes
+#
+
+# User Attributes
+
+# Password-related Attributes
+
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.14
+  NAME 'forcePasswordChange'
+  EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.16
+  NAME 'orderPassword'
+  EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.154
+  NAME 'orderPasswordUser'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.29
+  NAME 'orderPasswordDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.19
+  NAME 'latestPasswordChangeDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.20
+  NAME 'nextEnforcedPasswordChangeDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.21
+  NAME 'passwordGenerationDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.22
+  NAME 'passwordDeliveryDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+
+# Account Locking and Validity Attributes
+
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.9
+  NAME 'isLocked'
+  EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.11
+  NAME 'lockDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.26
+  NAME 'lockReason'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.8
+  NAME 'valid'
+  EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.27
+  NAME 'notValidBefore'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.28
+  NAME 'notValidAfter'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.12
+  NAME 'failedLogins'
+  EQUALITY integerMatch
+  ORDERING integerOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.15
+  NAME 'failedLoginsBeforeLatestSuccessfulLogin'
+  EQUALITY integerMatch
+  ORDERING integerOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.37
+  NAME 'failedFirstFactorAttempts'
+  EQUALITY integerMatch
+  ORDERING integerOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.150
+  NAME 'lastGsidDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.151
+  NAME 'lastGsidValue'
+  EQUALITY caseExactMatch
+  SUBSTR caseExactSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.153
+  NAME 'failedTokenCounts'
+  EQUALITY caseExactMatch
+  SUBSTR caseExactSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+# Login Statistics Attributes
+
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.13
+  NAME 'totalLogins'
+  EQUALITY integerMatch
+  ORDERING integerOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.31
+  NAME 'latestSuccessfulLogin'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.32
+  NAME 'secondLatestSuccessfulLogin'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.30
+  NAME 'latestLoginAttempt'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.33
+  NAME 'firstLogin'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.34
+  NAME 'unlockAttempts'
+  EQUALITY integerMatch
+  ORDERING integerOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.35
+  NAME 'latestUnlockAttempt'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+
+# Auth Metod Related Attributes
+
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.23
+  NAME 'authMethod'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.24
+  NAME 'nextAuthMethod'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.25
+  NAME 'authMigrationDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+
+# Various Attributes
+
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.59
+  NAME 'selfRegisteredFlag'
+  EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.60
+  NAME 'selfRegistrationDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.61
+  NAME 'channelVerificationResends'
+  EQUALITY integerMatch
+  ORDERING integerOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.39
+  NAME 'secretQuestionsEnabled'
+  EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.18
+  NAME 'roles'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.67
+  NAME 'memberOfGroup'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.17
+  NAME 'enabled'
+  EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.36
+  NAME 'matrixCardDeliveryDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.40
+  NAME 'currentCredentialBinaryData'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.5
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.41
+  NAME 'currentCredentialStringData'
+  EQUALITY caseExactIA5Match
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.42
+  NAME 'nextCredentialBinaryData'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.5
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.43
+  NAME 'nextCredentialStringData'
+  EQUALITY caseExactIA5Match
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.44
+  NAME 'currentCredentialSerialNumber'
+  EQUALITY caseExactIA5Match
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.45
+  NAME 'nextCredentialSerialNumber'
+  EQUALITY caseExactIA5Match
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.46
+  NAME 'credentialActive'
+  EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.47
+  NAME 'credentialOrdered'
+  EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.48
+  NAME 'currentCredentialDeliveryDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.49
+  NAME 'nextCredentialDeliveryDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.50
+  NAME 'currentCredentialGenerationDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.51
+  NAME 'nextCredentialGenerationDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.52
+  NAME 'otherCredential1DeliveryDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.53
+  NAME 'otherCredential2DeliveryDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.54
+  NAME 'mtanTokenMobilePhone'
+  EQUALITY caseExactIA5Match
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.55
+  NAME 'mtanTokenActive'
+  EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.56
+  NAME 'mtanTokenOrdered'
+  EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.57
+  NAME 'mtanTokenGenerationDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.58
+  NAME 'mtanTokenDeliverydate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+
+#
+# password self service token attributes
+#
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.62
+  NAME 'pwdSelfServiceTokenId'
+  EQUALITY caseExactMatch
+  SUBSTR caseExactSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.63
+  NAME 'pwdSelfServiceTokenConsumed'
+  EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.64
+  NAME 'pwdSelfServiceTokenConsumedAt'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.65
+  NAME 'pwdSelfServiceFailedAttempts'
+  EQUALITY integerMatch
+  ORDERING integerOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.66
+  NAME 'pwdSelfServiceTokenIssuedAt'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+#
+# Token list attributes
+#
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.70
+  NAME 'tokenList'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.5
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.71
+  NAME 'newTokenList'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.5
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.72
+  NAME 'tokenListDeliDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.73
+  NAME 'tokenListGenDate'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.74
+  NAME 'tokenListOrdered'
+  EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.75
+  NAME 'challengeOpenSince'
+  EQUALITY generalizedTimeMatch
+  ORDERING generalizedTimeOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+attributeTypes: ( 1.3.6.1.4.1.8389.1.1.76
+  NAME 'unansweredChallenges'
+  EQUALITY integerMatch
+  ORDERING integerOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+
+#
+#
+# END Iam attributes
+#
+#
+# BEGIN Iam objects
+#
+objectclass ( 1.3.6.1.4.1.8389.1.2.1
+  NAME 'IamUser'
+  DESC 'Iam user class'
+  SUP top
+  AUXILIARY
+  MAY ( isLocked $
+        lockReason $
+        lockDate $
+        valid $
+        failedLogins $
+        failedTokenCounts $
+        totalLogins $
+        forcePasswordChange $
+        failedLoginsBeforeLatestSuccessfulLogin $
+        orderPassword $
+        orderPasswordDate $
+        orderPasswordUser $
+        enabled $
+        roles $
+        memberOfGroup $
+        latestPasswordChangeDate $
+        nextEnforcedPasswordChangeDate $
+        passwordGenerationDate $
+        passwordDeliveryDate $
+        authMethod $
+        nextAuthMethod $
+        authMigrationDate $
+        notValidBefore $
+        notValidAfter $
+        latestLoginAttempt $
+        latestSuccessfulLogin $
+        secondLatestSuccessfulLogin $
+        firstLogin $
+        unlockAttempts $
+        latestUnlockAttempt $
+        matrixCardDeliveryDate $
+        failedFirstFactorAttempts $
+        secretQuestionsEnabled $
+        tokenList $
+        newTokenList $
+        tokenListDeliDate $
+        tokenListGenDate $
+        tokenListOrdered $
+        challengeOpenSince $
+        unansweredChallenges $
+        lastGsidValue $
+        lastGsidDate $
+        mtanTokenMobilePhone $
+        mtanTokenActive $
+        mtanTokenOrdered $
+        mtanTokenGenerationDate $
+        mtanTokenDeliverydate $
+        selfRegisteredFlag $
+        selfRegistrationDate $
+        channelVerificationResends )
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+objectclass ( 1.3.6.1.4.1.8389.1.2.2
+  NAME 'iamCredential'
+  DESC 'Iam credential class'
+  AUXILIARY
+  MAY ( currentCredentialBinaryData $
+        currentCredentialStringData $
+        nextCredentialBinaryData $
+        nextCredentialStringData $
+        currentCredentialSerialNumber $
+        nextCredentialSerialNumber $
+        credentialActive $
+        credentialOrdered $
+        currentCredentialDeliveryDate $
+        nextCredentialDeliveryDate $
+        currentCredentialGenerationDate $
+        nextCredentialGenerationDate $
+        otherCredential1DeliveryDate $
+        otherCredential2DeliveryDate )
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+objectclass ( 1.3.6.1.4.1.8389.1.2.3
+  NAME 'iamPasswordSelfServiceToken'
+  DESC 'Iam password self service token class'
+  SUP top
+  STRUCTURAL
+  MUST ( pwdSelfServiceTokenId $
+        uid )
+  MAY ( pwdSelfServiceTokenIssuedAt $
+        pwdSelfServiceTokenConsumed $
+        pwdSelfServiceTokenConsumedAt $
+        pwdSelfServiceFailedAttempts $
+        enabled $
+        givenName $
+        sn )
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+objectclass ( 1.3.6.1.4.1.8389.1.2.4
+  NAME 'iamGroup'
+  DESC 'Iam user group'
+  SUP groupOfNames
+  STRUCTURAL
+  MUST ( cn )
+  MAY ( ou $
+        memberOfGroup)
+  X-ORIGIN 'http://confluence.ergon.ch/x/24HY' )
+
+#
+# END Iam objects
+#
